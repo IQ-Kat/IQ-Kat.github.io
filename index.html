@@ -12,7 +12,12 @@
 
     <div class="navbar" id="navbar">
         <h1>IkbalDev</h1>
-        <ul>
+        <div class="burger" id="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul id="menu">
             <li><a href="index.html">Beranda</a></li>
             <li><a href="jokitugas.html">Joki Tugas</a></li>
             <li><a href="sk.html">Syarat & Ketentuan</a></li>
@@ -530,6 +535,11 @@
                 event.target.style.display = 'none';
             }
         }
+
+        function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active'); // Toggle the active class
+}
     </script>
 </body>
 
