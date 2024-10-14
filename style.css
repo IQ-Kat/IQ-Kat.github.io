@@ -257,7 +257,54 @@ a:hover {
     transition: all 0.3s ease;
     z-index: 1000;
 }
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.line {
+    width: 25px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+#menu {
+    display: flex;
+}
 
+@media (max-width: 765px) {
+    #menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar.active #menu {
+        display: flex; /* Show menu when active */
+    }
+
+    .burger {
+        display: flex; /* Show burger icon */
+    }
+
+    .navbar.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); /* Top line to X */
+    }
+
+    .navbar.active .line:nth-child(2) {
+        opacity: 0; /* Hide middle line */
+    }
+
+    .navbar.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px); /* Bottom line to X */
+    }
+}
 .navbar.scrolled {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-10px);
