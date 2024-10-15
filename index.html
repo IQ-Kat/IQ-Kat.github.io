@@ -21,8 +21,11 @@
             <li><a href="index.html">Beranda</a></li>
             <li><a href="jokitugas.html">Joki Tugas</a></li>
             <li><a href="sk.html">Syarat & Ketentuan</a></li>
-            <!-- <li><a href="portofolio.html">Kontak</a></li> -->
         </ul>
+        <div class="secret-code-container">
+            <input type="text" id="secretCode" placeholder="Masukkan Kode" />
+            <button class="secret-code-button" onclick="checkSecretCode()">Go</button>
+        </div>
     </div>
     <header>
         <h1>Daftar Paket Pembuatan Game</h1>
@@ -541,6 +544,7 @@
     navbar.classList.toggle('active'); // Toggle the active class
 }
     </script>
+    <script src="code.js"></script>
 </body>
 
 </html>
