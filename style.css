@@ -362,3 +362,48 @@ a:hover {
     padding: 0;
     margin: 0;
 }
+
+@media (max-width: 850px) 
+{
+    .secret-code-button {
+        display: none;
+    }
+    #secretCode {
+        display: none;
+    }
+    .secret-code-container {
+        display: none;
+        align-items: center;
+    }
+}
+@media (min-width: 849px) {
+.secret-code-container {
+    display: flex;
+    align-items: center;
+}
+}
+
+#secretCode {
+    padding: 10px;
+    border: 2px solid rgb(50, 199, 245);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.secret-code-button {
+    background: white;
+    border: 2px solid rgb(50, 199, 245);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.secret-code-button:hover {
+    background: linear-gradient(45deg, blue, cyan);
+    border: none;
+    color: white;
+}
