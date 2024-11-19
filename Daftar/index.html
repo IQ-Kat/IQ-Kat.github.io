@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Tugas Selesai</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .status-selesai {
+            color: green;
+            font-weight: bold;
+        }
+        .status-dalam {
+            color: orange;
+            font-weight: bold;
+        }
+        .status-belum {
+            color: red;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                display: none; /* Sembunyikan header pada perangkat kecil */
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%; /* Ruang untuk label */
+                margin-bottom: 15px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            td::before {
+                content: attr(data-label); /* Menggunakan atribut data-label */
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Tugas Selesai</h1>
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>Nama Pelanggan</th>
+                <th>Jenis Tugas</th>
+                <th>Harga</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Nama Teman">#Hijau</td>
+                <td data-label="Jenis Tugas">Tugas Web</td>
+                <td data-label="Harga">134.000 IDR</td>
+                <td data-label="Status" class="status-selesai">Selesai</td>
+            </tr>
+            <tr>
+                <td data-label="Nama Teman">#Biru</td>
+                <td data-label="Jenis Tugas">Tugas Web</td>
+                <td data-label="Harga">134.000 IDR</td>
+                <td data-label="Status" class="status-selesai">Selesai</td>
+            </tr>
+            <tr>
+                <td data-label="Nama Teman">#Merah</td>
+                <td data-label="Jenis Tugas">Tugas Web</td>
+                <td data-label="Harga">134.000 IDR</td>
+                <td data-label="Status" class="status-dalam">Dalam Proses</td>
+            </tr>
+            <tr>
+                <td data-label="Nama Teman">#Ubi</td>
+                <td data-label="Jenis Tugas">Tugas Web</td>
+                <td data-label="Harga">75.000 IDR</td>
+                <td data-label="Status" class="status-belum">Belum Selesai</td>
+            </tr>
+             <tr>
+                <td data-label="Nama Teman">#Wanita</td>
+                <td data-label="Jenis Tugas">Tugas Web</td>
+                <td data-label="Harga">75.000 IDR</td>
+                <td data-label="Status" class="status-belum">Belum Selesai</td>
+            </tr>
+             <tr>
+                <td data-label="Nama Teman">#Wanita</td>
+                <td data-label="Jenis Tugas">Tugas PPT</td>
+                <td data-label="Harga">22.500 IDR</td>
+                <td data-label="Status" class="status-selesai"> Selesai</td>
+            </tr>
+             <tr>
+               <td data-label="Nama Teman">#Wanita</td>
+               <td data-label="Jenis Tugas">Tugas Proposal</td>
+               <td data-label="Harga">48.000 IDR</td>
+               <td data-label="Status" class="status-belum"> Belum Selesai</td>
+             </tr>
+        </tbody>
+    </table>
+</body>
+</html>
