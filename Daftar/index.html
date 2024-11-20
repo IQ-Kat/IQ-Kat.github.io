@@ -3,138 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Tugas Selesai</title>
+    <title>Pengumuman Daftar Tugas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-color: #f4f4f9;
         }
-        h1 {
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
             text-align: center;
-            color: #333;
-            margin-bottom: 20px;
         }
         table {
-            width: 100%;
+            width: 90%;
+            margin: 20px auto;
             border-collapse: collapse;
-            margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
         }
         th, td {
-            padding: 15px;
-            text-align: left;
+            padding: 12px;
             border: 1px solid #ddd;
+            text-align: center;
         }
         th {
-            background-color: #007BFF;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
+            background-color: #f2f2f2;
         }
         .status-selesai {
             color: green;
-            font-weight: bold;
-        }
-        .status-dalam {
-            color: orange;
-            font-weight: bold;
         }
         .status-belum {
             color: red;
-            font-weight: bold;
         }
-
-        @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-            th {
-                display: none; /* Sembunyikan header pada perangkat kecil */
-            }
-            td {
-                text-align: right;
-                position: relative;
-                padding-left: 50%; /* Ruang untuk label */
-                margin-bottom: 15px;
-                background-color: #fff;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-            }
-            td::before {
-                content: attr(data-label); /* Menggunakan atribut data-label */
-                position: absolute;
-                left: 0;
-                width: 50%;
-                padding-left: 10px;
-                text-align: left;
-                font-weight: bold;
-            }
+        .status-proses {
+            color : #ff8000;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>Daftar Tugas Selesai</h1>
-    <table id="taskTable">
-        <thead>
-            <tr>
-                <th>Nama Pelanggan</th>
-                <th>Jenis Tugas</th>
-                <th>Harga</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td data-label="Nama Teman">#Hijau</td>
-                <td data-label="Jenis Tugas">Tugas Web</td>
-                <td data-label="Harga">134.000 IDR</td>
-                <td data-label="Status" class="status-selesai">Selesai</td>
-            </tr>
-            <tr>
-                <td data-label="Nama Teman">#Biru</td>
-                <td data-label="Jenis Tugas">Tugas Web</td>
-                <td data-label="Harga">134.000 IDR</td>
-                <td data-label="Status" class="status-selesai">Selesai</td>
-            </tr>
-            <tr>
-                <td data-label="Nama Teman">#Merah</td>
-                <td data-label="Jenis Tugas">Tugas Web</td>
-                <td data-label="Harga">134.000 IDR</td>
-                <td data-label="Status" class="status-dalam">Dalam Proses</td>
-            </tr>
-            <tr>
-                <td data-label="Nama Teman">#Ubi</td>
-                <td data-label="Jenis Tugas">Tugas Web</td>
-                <td data-label="Harga">75.000 IDR</td>
-                <td data-label="Status" class="status-belum">Belum Selesai</td>
-            </tr>
-             <tr>
-                <td data-label="Nama Teman">#Wanita</td>
-                <td data-label="Jenis Tugas">Tugas Web</td>
-                <td data-label="Harga">75.000 IDR</td>
-                <td data-label="Status" class="status-belum">Belum Selesai</td>
-            </tr>
-             <tr>
-                <td data-label="Nama Teman">#Wanita</td>
-                <td data-label="Jenis Tugas">Tugas PPT</td>
-                <td data-label="Harga">22.500 IDR</td>
-                <td data-label="Status" class="status-selesai"> Selesai</td>
-            </tr>
-             <tr>
-               <td data-label="Nama Teman">#Wanita</td>
-               <td data-label="Jenis Tugas">Tugas Proposal</td>
-               <td data-label="Harga">48.000 IDR</td>
-               <td data-label="Status" class="status-belum"> Belum Selesai</td>
-             </tr>
-        </tbody>
-    </table>
+
+<header>
+    <h1>Pengumuman Daftar Tugas</h1>
+</header>
+
+<h2>Nama: Hijau</h2>
+<!-- Milda -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp134.000</td>
+            <td class="status-selesai">Selesai</td>
+            <td>No 2</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp134.000</strong></td>
+            <td>Paket Komplit</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Nama: Biru</h2>
+<!-- Fitria -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp134.000</td>
+            <td class="status-selesai">Selesai</td>
+            <td>No 3</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp134.000</strong></td>
+            <td>Paket Komplit</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Nama: Merah</h2>
+<!-- Anti -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp134.000</td>
+            <td class="status-proses">Proses</td>
+            <td>No 4</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp134.000</strong></td>
+            <td>Paket Komplit</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Nama: Ubi</h2>
+<!-- Yuni -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp75.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 8</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp75.000</strong></td>
+            <td> Web : Standar</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Nama: Wanita</h2>
+<!-- Nirfat -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp75.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 9</td>
+        </tr>
+        <tr>
+            <td>Tugas Proposal</td>
+            <td>Rp48.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 5</td>
+        </tr>
+        <tr>
+            <td>Tugas PPT</td>
+            <td>Rp22.500</td>
+            <td class="status-selesai">Selesai</td>
+            <td>No 1</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp145.500</strong></td>
+            <td><p>Web : Standar</p><p>Proposal : Melanjutkan</p><p>PPT : VIP</p></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Nama: Ikan</h2>
+<!-- wisna -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp75.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 11</td>
+        </tr>
+        <tr>
+            <td>Tugas Proposal</td>
+            <td>Rp78.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 7</td>
+        </tr>
+        <tr>
+            <td>Tugas PPT</td>
+            <td>Rp12.000</td>
+            <td class="status-selesai">Selesai</td>
+            <td>No 6</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp165.000</strong></td>
+            <td><p>Web : Standar</p><p>Proposal :Memperbaiki dan Melanjutkan</p><p>PPT : Standar</p></td>
+        </tr>
+    </tbody>
+</table>
+<h2>Nama: OmOm</h2>
+<!-- Iska -->
+<table>
+    <thead>
+        <tr>
+            <th>Tugas</th>
+            <th>Harga</th>
+            <th>Status</th>
+            <th>Catatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tugas Website</td>
+            <td>Rp55.000</td>
+            <td class="status-belum">Belum Selesai</td>
+            <td>No 10</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;"><strong>Total Harga</strong></td>
+            <td><strong>Rp55.500</strong></td>
+            <td>Melanjutkan-Memperbaiki-Bukan Mendesain</td>
+        </tr>
+    </tbody>
+</table>
+<h2>SIAPAPUN YANG SUDAH MEMILIKI NAMA DI ATAS TIDAK BISA MELAKUKAN PEMBATALAN SAAT PROYEK DALAM STATUS <i class="status-selesai">SELESAI</i> DAN <i class="status-proses">PROSES</i></h2>
 </body>
 </html>
